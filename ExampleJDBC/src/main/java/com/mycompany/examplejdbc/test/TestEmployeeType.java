@@ -20,8 +20,7 @@ public class TestEmployeeType {
         //insertar
         
         EmployeeType employeeType = new EmployeeType(6, "SUBDIRECTOR");
-        
-//        dBEmployeeType.insert(employeeType);
+//      dBEmployeeType.insert(employeeType);
         
         //actualizar
         
