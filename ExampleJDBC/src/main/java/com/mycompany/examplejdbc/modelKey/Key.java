@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.examplejdbc.key;
+package com.mycompany.examplejdbc.modelKey;
 
 /**
  * Fecha: 13/03/2025
@@ -10,6 +10,7 @@ package com.mycompany.examplejdbc.key;
  * Objetivo: 
  */
 public class Key {
+    private int id;
     private String name;
     private String room;
     private int count;
@@ -18,11 +19,20 @@ public class Key {
     public Key() {
     }
 
-    public Key(String name, String room, int count, String observation) {
+    public Key(int id, String name, String room, int count, String observation) {
+        this.id = id;
         this.name = name;
         this.room = room;
         this.count = count;
         this.observation = observation;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -56,6 +66,6 @@ public class Key {
     public void setObservation(String observation) {
         this.observation = observation;
     }
-    
+   
     
 }

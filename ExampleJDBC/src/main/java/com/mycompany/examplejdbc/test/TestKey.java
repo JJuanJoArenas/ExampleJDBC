@@ -5,7 +5,8 @@
 package com.mycompany.examplejdbc.test;
 
 import com.mycompany.examplejdbc.bd.DBKey;
-import com.mycompany.examplejdbc.key.Key;
+import com.mycompany.examplejdbc.modelKey.Key;
+import java.util.List;
 
 /**
  *
@@ -17,8 +18,49 @@ public class TestKey {
         
         //insertar
         
-        Key key = new Key("Sala Informatica", "Sala 1", 2, "Llavero con algo azul");
-        dbKey.insert(key);
+        Key key = new Key(1, "Sala Informatica", "Sala 1", 2, "Llavero con algo azul");
+//        dbKey.insert(key);
         
+        //actualizar
+        
+//        key.setId(5);
+//        key.setName("Bicentenario");
+//        key.setRoom("Sala 202");
+//        key.setCount(1);
+//        key.setObservation("Cambio de llavero");
+//        dbKey.update(key);
+
+        //eliminar
+        
+//        dbKey.delete(5);
+
+        //consultar todos
+        
+        System.out.println("***********************************");
+        
+        List<Key> findAll = dbKey.findAll();
+        
+        for (Key k : findAll) {
+            System.out.println("id: " + k.getId() + " name: " + k.getName()+
+            " room: " + k.getRoom() + " count: " + k.getRoom() + " observation: " 
+                                                            + k.getObservation());
+        }
+        
+        //consultar por id
+        
+        System.out.println("*************************************");
+        
+        Key key2 = dbKey.findById(3);
+        
+        if(key2 != null)
+        {
+            System.out.println("id: " + key2.getId() + " name: " + key2.getName()+
+            " room: " + key2.getRoom() + " count: " + key2.getRoom() + " observation: " 
+                                                            + key2.getObservation());
+        }
+        else
+        {
+            System.out.println("No existe una llave con ese id");
+        }
     }
 }
