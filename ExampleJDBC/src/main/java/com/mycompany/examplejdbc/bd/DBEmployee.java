@@ -6,7 +6,7 @@ package com.mycompany.examplejdbc.bd;
 
 import static com.mycompany.examplejdbc.bd.DBConnection.connection;
 import com.mycompany.examplejdbc.model.EmployeeType;
-import com.mycompany.examplejdbc.modelKey.Employee;
+import com.mycompany.examplejdbc.model.Employee;
 import com.mycompany.examplejdbc.utils.MessageUtils;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -65,16 +65,18 @@ public class DBEmployee extends DBConnection {
             disconnect();
         }
     }
+    
     public void delete(long document) {
         //METODO PARA ELIMINAR
         try {
             connect();
-            String sql = "DELETE FROM employee WHERE document = ?";
+            String sql = "DELETE FROM `employee` WHERE `document` = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setLong(1, document);
             preparedStatement.executeUpdate();
             preparedStatement.close();
-        } catch (SQLException e) {
+        } 
+        catch (SQLException e) {
             MessageUtils.showErrorMessage("Error al eliminar empleado "+
                                                 e.getMessage());
         }
@@ -84,7 +86,6 @@ public class DBEmployee extends DBConnection {
         }
     }
     
-        
    public List<Employee> findAll(){
        //METODO CONSULTAR TODOS
        List<Employee> results = new ArrayList();
@@ -107,12 +108,13 @@ public class DBEmployee extends DBConnection {
             }
        } 
        catch (SQLException e) {
-           
+           MessageUtils.showErrorMessage("Error al consultar los empleados" +
+                                        e.getMessage());
        } 
        finally {
            disconnect();
        }
-        return null;
+        return results;
     }
    
    public Employee findById(long document){
@@ -141,10 +143,10 @@ public class DBEmployee extends DBConnection {
            preparedStatement.close();
        }
         catch (Exception e) {
-           MessageUtils.showErrorMessage("Error al eliminar empleado "+
+           MessageUtils.showErrorMessage("Error al consultar tipo de empleado "+
                                                 e.getMessage());
        }
-        return null;
+        return employee;
    }
    
 }

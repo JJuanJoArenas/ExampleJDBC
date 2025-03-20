@@ -2,9 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.examplejdbc.modelKey;
-
-import com.mycompany.examplejdbc.model.EmployeeType;
+package com.mycompany.examplejdbc.model;
 
 /**
  * Fecha:20/03/2025

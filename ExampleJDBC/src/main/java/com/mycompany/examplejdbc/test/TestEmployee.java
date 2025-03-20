@@ -7,7 +7,7 @@ package com.mycompany.examplejdbc.test;
 import com.mycompany.examplejdbc.bd.DBEmployee;
 import com.mycompany.examplejdbc.bd.DBEmployeeType;
 import com.mycompany.examplejdbc.model.EmployeeType;
-import com.mycompany.examplejdbc.modelKey.Employee;
+import com.mycompany.examplejdbc.model.Employee;
 import java.util.List;
 
 /**
