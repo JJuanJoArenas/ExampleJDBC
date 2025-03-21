@@ -4,7 +4,7 @@
  */
 package com.mycompany.examplejdbc.bd;
 
-import com.mycompany.examplejdbc.modelKey.Key;
+import com.mycompany.examplejdbc.model.Key;
 import com.mycompany.examplejdbc.utils.MessageUtils;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

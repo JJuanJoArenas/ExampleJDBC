@@ -5,7 +5,7 @@
 package com.mycompany.examplejdbc.test;
 
 import com.mycompany.examplejdbc.bd.DBKey;
-import com.mycompany.examplejdbc.modelKey.Key;
+import com.mycompany.examplejdbc.model.Key;
 import java.util.List;
 
 /**
