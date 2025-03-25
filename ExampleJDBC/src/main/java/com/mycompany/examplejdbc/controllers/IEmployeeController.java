@@ -8,7 +8,7 @@ import com.mycompany.examplejdbc.model.Employee;
 import java.util.List;
 
 /**
- * Fecha: 25/03/2025
+ * Fecha:25/03/2025
  * @author JuanJo
  * Objetivo: Interface para el metodo Employee
  */

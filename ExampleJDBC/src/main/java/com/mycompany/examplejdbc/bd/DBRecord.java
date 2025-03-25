@@ -89,7 +89,7 @@ public class DBRecord extends DBConnection {
         }
     }
     
-    public List<Record> findAll(){
+    public List <Record> findAll(){
         //METODO PARA CONSULTAR TODOS
         List<Record> results = new ArrayList();
         DBKey dbkey = new DBKey();

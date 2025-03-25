@@ -9,8 +9,9 @@ import com.mycompany.examplejdbc.model.Employee;
 import java.util.List;
 
 /**
- *
- * @author Aprendiz
+ * Fecha:25/03/2025
+ * @author JuanJo
+ * Objetivo: Implementar la interface para controlar los metodos Employee
  */
 public class EmployeeController implements IEmployeeController{
     
@@ -49,7 +50,7 @@ public class EmployeeController implements IEmployeeController{
             throw new Exception("El tipo de empleado es oblogatorio");
         }
         
-        //La FK no es autoincrementar, se debe validar existencia del empleado
+        //La PK no es autoincrementable, se debe validar existencia del empleado
         Employee employeeExists = dbe.findById(employee.getDocument());
         if(employeeExists != null)
         {
@@ -93,7 +94,7 @@ public class EmployeeController implements IEmployeeController{
             throw new Exception("El tipo de empleado es oblogatorio");
         }
         
-        
+        //consultar si el empleado existe en la bd
         Employee employeeExists = dbe.findById(employee.getDocument());
         if(employeeExists == null)
         {
