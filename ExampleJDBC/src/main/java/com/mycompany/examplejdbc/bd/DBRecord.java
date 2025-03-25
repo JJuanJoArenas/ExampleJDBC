@@ -37,7 +37,7 @@ public class DBRecord extends DBConnection {
             preparedStatement.close();
         } 
         catch (SQLException e) {
-            MessageUtils.showErrorMessage("Error al insertar Registro "+
+            MessageUtils.showErrorMessage("Error al insertar el registro "+
                                                 e.getMessage());
         }
         finally{

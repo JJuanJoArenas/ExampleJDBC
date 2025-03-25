@@ -69,7 +69,7 @@ public class DBKey extends DBConnection{
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException e) {
-            MessageUtils.showErrorMessage("Error al eliminar una llave"+
+            MessageUtils.showErrorMessage("Error al eliminar la llave"+
                                         e.getMessage());
         }
         finally
