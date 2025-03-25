@@ -24,15 +24,15 @@ public class DBRecord extends DBConnection {
         //METODO PARA INSERTAR
         try {
             connect();
-            String sql = "INSERT INTO `record` VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO `record` (`id`, `date_record`, `start_time`, `end_time`, `employee_id`, `key_id`, `status`) VALUES (?, ?, ?, ?, ?, ?, ?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, record.getId());
             preparedStatement.setString(2, record.getDate_record());
             preparedStatement.setString(3, record.getStart_time());
             preparedStatement.setString(4, record.getEnd_time());
             preparedStatement.setString(5, record.getStatus());
-            preparedStatement.setInt(6, record.getKey().getId()); //FOREIGN KEY
-            preparedStatement.setLong(7, record.getEmployee().getDocument()); //FOREIGN KEY
+            preparedStatement.setLong(6, record.getEmployee().getDocument()); //FOREIGN KEY
+            preparedStatement.setInt(7, record.getKey().getId()); //FOREIGN KEY
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } 
