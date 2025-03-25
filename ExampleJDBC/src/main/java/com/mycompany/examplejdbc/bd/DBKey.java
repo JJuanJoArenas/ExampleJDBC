@@ -20,7 +20,7 @@ public class DBKey extends DBConnection{
     public void insert(Key key){
         try {
             connect();
-            String sql = "insert into `key` (name, room, count, observation) values (?, ?, ?, ?)";
+            String sql = "INSERT INTO `key` (name, room, count, observation) VALUES (?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, key.getName());
             preparedStatement.setString(2, key.getRoom());
@@ -41,7 +41,7 @@ public class DBKey extends DBConnection{
     public void update(Key key){
         try {
             connect();
-            String sql = "update `key` set name = ?, room = ?, count = ?, observation = ? where id = ?";
+            String sql = "UPDATE `key` set name = ?, room = ?, count = ?, observation = ? WHERE id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, key.getName());
             preparedStatement.setString(2, key.getRoom());
@@ -63,7 +63,7 @@ public class DBKey extends DBConnection{
     public void delete(int id){
         try {
             connect();
-            String sql = "delete from `key` where id = ?";
+            String sql = "DELETE FROM `key` WHERE id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
@@ -82,7 +82,7 @@ public class DBKey extends DBConnection{
         List<Key> results = new ArrayList<>();
         try {
             connect();
-            String sql = "select * from `key`";
+            String sql = "SELECT * FROM `key`";
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             
@@ -112,7 +112,7 @@ public class DBKey extends DBConnection{
         Key key = null;
         try {
             connect();
-            String sql = "select * from `key` where id = ?";
+            String sql = "SELECT * FROM `key` WHERE id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
