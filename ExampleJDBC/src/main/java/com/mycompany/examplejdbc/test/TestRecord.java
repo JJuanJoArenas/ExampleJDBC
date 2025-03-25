@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Fecha: 20/03/2025
  * @author JuanJo
- * Objetivo: Probra consultas y transacciones en la tabla record
+ * Objetivo: Probar consultas y transacciones en la tabla record
  */
 public class TestRecord {
     public static void main(String[] args) {
@@ -24,21 +24,21 @@ public class TestRecord {
         DBEmployee dbe = new DBEmployee();
         
         //INSERTAR
-        Key key = dbkey.findById(4);
-        Employee employee = dbe.findById(4);
-        Record record = new Record(2025, "2025-03-20", "11:20:00", "12:35:00", "ENTREGADO", key, employee);
+        Key key = dbkey.findById(1);
+        Employee employee = dbe.findById(5);
+        Record record = new Record(5, "2025-03-20", "11:20:00", "12:35:00", "ENTREGADO", key, employee);
         dbrec.insert(record);
         
         //ACTUALIZAR
-        record.setDate_record("15:33:00");
+//        record.setDate_record("15:33:00");
         //FOREIGN KEY EMPLOYEE
-        record.setEmployee(employee);
+//        record.setEmployee(employee);
         //FOREIGN KEY KEY
         record.setKey(key);
-        dbrec.update(record);
+//        dbrec.update(record);
         
         //ELIMINAR
-        dbrec.delete(2025);
+//        dbrec.delete(2025);
         
         //CONSULTAR TODOS
         System.out.println("********************************");
