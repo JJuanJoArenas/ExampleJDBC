@@ -86,13 +86,13 @@ public class DBEmployee extends DBConnection {
         }
     }
     
-   public List<Employee> findAll(){
+   public List <Employee> findAll(){
        //METODO CONSULTAR TODOS
        List<Employee> results = new ArrayList();
        DBEmployeeType dbet = new DBEmployeeType();
        try {
            connect();
-           String sql = "select from employee";
+           String sql = "select * from employee";
            statement = connection.createStatement();
            ResultSet resultSet = statement.executeQuery(sql);
            
@@ -105,6 +105,7 @@ public class DBEmployee extends DBConnection {
                //FOREIGN KEY
                EmployeeType employeeType = dbet.findById(resultSet.getInt("type_id"));
                employee.setEmployeeType(employeeType);
+               results.add(employee);
             }
        } 
        catch (SQLException e) {
