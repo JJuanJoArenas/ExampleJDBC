@@ -4,7 +4,6 @@
  */
 package com.mycompany.examplejdbc.view;
 
-import com.mycompany.examplejdbc.bd.DBEmployeeType;
 import com.mycompany.examplejdbc.controllers.EmployeeTypeController;
 import com.mycompany.examplejdbc.controllers.IEmployeeTypeController;
 import com.mycompany.examplejdbc.model.EmployeeType;
@@ -14,8 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
- * @author Aprendiz
+ * Fecha: 03/04/2025
+ * @author JuanJo
  */
 public class JFrameEmployeeType extends javax.swing.JFrame {
     private IEmployeeTypeController employeeTypeController = new EmployeeTypeController();
