@@ -122,21 +122,22 @@ public class JFrameRecord extends javax.swing.JFrame {
         jButtonClean = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableRecord = new javax.swing.JTable();
+        jLabelHome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
+        jLabelTitle.setText("Registros");
         jLabelTitle.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTitle.setText("Registros");
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        jLabelId.setText("Id:");
         jLabelId.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelId.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelId.setText("Id:");
 
         jTextFieldId.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         jTextFieldId.setForeground(new java.awt.Color(0, 0, 0));
@@ -144,13 +145,13 @@ public class JFrameRecord extends javax.swing.JFrame {
         datePickerDate.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         datePickerDate.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabelDate.setText("Fecha:");
         jLabelDate.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelDate.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelDate.setText("Fecha:");
 
+        jLabelStartTime.setText("Hora inicio:");
         jLabelStartTime.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelStartTime.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelStartTime.setText("Hora inicio:");
 
         timePickerStartTime.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         timePickerStartTime.setForeground(new java.awt.Color(0, 0, 0));
@@ -210,27 +211,27 @@ public class JFrameRecord extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        jLabelEmployee.setText("Funcionario:");
         jLabelEmployee.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelEmployee.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelEmployee.setText("Funcionario:");
 
         jComboBoxEmployee.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jComboBoxEmployee.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabelKey.setText("Llave:");
         jLabelKey.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelKey.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelKey.setText("Llave:");
 
         jComboBoxKey.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jComboBoxKey.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabelStatus.setText("Estado:");
         jLabelStatus.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelStatus.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelStatus.setText("Estado:");
 
+        jComboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendiente", "Entregado", "Cancelado" }));
         jComboBoxStatus.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jComboBoxStatus.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendiente", "Entregado", "Cancelado" }));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -267,42 +268,42 @@ public class JFrameRecord extends javax.swing.JFrame {
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
+        jButtonInsert.setText("Crear");
         jButtonInsert.setBackground(new java.awt.Color(0, 0, 0));
         jButtonInsert.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonInsert.setForeground(new java.awt.Color(51, 255, 51));
-        jButtonInsert.setText("Crear");
         jButtonInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInsertActionPerformed(evt);
             }
         });
 
+        jButtonUpdate.setText("Modificar");
         jButtonUpdate.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonUpdate.setEnabled(false);
         jButtonUpdate.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonUpdate.setForeground(new java.awt.Color(0, 204, 255));
-        jButtonUpdate.setText("Modificar");
-        jButtonUpdate.setEnabled(false);
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
 
+        jButtonDelete.setText("Eliminar");
         jButtonDelete.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonDelete.setEnabled(false);
         jButtonDelete.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonDelete.setForeground(new java.awt.Color(255, 0, 0));
-        jButtonDelete.setText("Eliminar");
-        jButtonDelete.setEnabled(false);
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
 
+        jButtonClean.setText("Limpiar");
         jButtonClean.setBackground(new java.awt.Color(0, 0, 0));
         jButtonClean.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonClean.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonClean.setText("Limpiar");
         jButtonClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCleanActionPerformed(evt);
@@ -326,14 +327,18 @@ public class JFrameRecord extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTableRecord);
 
+        jLabelHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/examplejdbc/view/home.png"))); // NOI18N
+        jLabelHome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelHomeMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelTitle)
-                .addGap(518, 518, 518))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(112, 112, 112)
                 .addComponent(jButtonInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -347,18 +352,27 @@ public class JFrameRecord extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(34, 34, 34))
+                        .addComponent(jLabelHome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelTitle)
+                        .addGap(518, 518, 518))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(34, 34, 34))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabelTitle)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTitle)
+                    .addComponent(jLabelHome))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -371,7 +385,7 @@ public class JFrameRecord extends javax.swing.JFrame {
                     .addComponent(jButtonClean, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -483,6 +497,12 @@ public class JFrameRecord extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTableRecordMouseClicked
 
+    private void jLabelHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelHomeMouseClicked
+        JFrameHome view = new JFrameHome();
+        view.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jLabelHomeMouseClicked
+
     public void clean(){
         jTextFieldId.setText("");
         datePickerDate.setText("");
@@ -544,6 +564,7 @@ public class JFrameRecord extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDate;
     private javax.swing.JLabel jLabelEmployee;
     private javax.swing.JLabel jLabelEndTime;
+    private javax.swing.JLabel jLabelHome;
     private javax.swing.JLabel jLabelId;
     private javax.swing.JLabel jLabelKey;
     private javax.swing.JLabel jLabelStartTime;

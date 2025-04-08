@@ -44,18 +44,38 @@ public class JFrameHome extends javax.swing.JFrame {
         jButtonEmployeeType.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonEmployeeType.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEmployeeType.setText("Tipos de funcionario");
+        jButtonEmployeeType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEmployeeTypeActionPerformed(evt);
+            }
+        });
 
         jButtonEmployee.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonEmployee.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEmployee.setText("Funcionarios");
+        jButtonEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEmployeeActionPerformed(evt);
+            }
+        });
 
         jButtonKey.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonKey.setForeground(new java.awt.Color(255, 255, 255));
         jButtonKey.setText("Llaves");
+        jButtonKey.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonKeyActionPerformed(evt);
+            }
+        });
 
         jButtonRecord.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonRecord.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRecord.setText("Registro");
+        jButtonRecord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRecordActionPerformed(evt);
+            }
+        });
 
         jLabelTitle.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
@@ -88,7 +108,7 @@ public class JFrameHome extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                                 .addComponent(jLabel1))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(463, 463, 463)
+                        .addGap(450, 450, 450)
                         .addComponent(jLabelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(98, 98, 98))
         );
@@ -129,6 +149,30 @@ public class JFrameHome extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonEmployeeTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmployeeTypeActionPerformed
+        JFrameEmployeeType jfet = new JFrameEmployeeType();
+        jfet.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonEmployeeTypeActionPerformed
+
+    private void jButtonEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmployeeActionPerformed
+        JFrameEmployee jfe = new JFrameEmployee();
+        jfe.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonEmployeeActionPerformed
+
+    private void jButtonKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKeyActionPerformed
+        JFrameKey jfk = new JFrameKey();
+        jfk.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonKeyActionPerformed
+
+    private void jButtonRecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRecordActionPerformed
+        JFrameRecord jfr = new JFrameRecord();
+        jfr.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButtonRecordActionPerformed
 
     /**
      * @param args the command line arguments

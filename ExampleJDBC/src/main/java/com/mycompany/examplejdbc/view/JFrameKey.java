@@ -77,84 +77,85 @@ public class JFrameKey extends javax.swing.JFrame {
         jButtonClean = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableKey = new javax.swing.JTable();
+        jLabelHome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
+        jLabelTitle.setText("Administracion de llaves");
         jLabelTitle.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTitle.setText("Administracion de llaves");
 
+        jLabel2.setText("ID:");
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("ID:");
 
         jTextFieldID.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabelName.setText("Nombre:");
         jLabelName.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelName.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelName.setText("Nombre:");
 
         jTextFieldName.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabelRoom.setText("Aula:");
         jLabelRoom.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelRoom.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelRoom.setText("Aula:");
 
         jTextFieldRoom.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabelCount.setText("Cantidad:");
         jLabelCount.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelCount.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelCount.setText("Cantidad:");
 
         jTextFieldCount.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabelObservation.setText("Observacion:");
         jLabelObservation.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jLabelObservation.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelObservation.setText("Observacion:");
 
         jTextAreaObservation.setColumns(20);
         jTextAreaObservation.setForeground(new java.awt.Color(0, 0, 0));
         jTextAreaObservation.setRows(5);
         jScrollPane1.setViewportView(jTextAreaObservation);
 
+        jButtonInsert.setText("Insertar");
         jButtonInsert.setBackground(new java.awt.Color(51, 204, 0));
         jButtonInsert.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonInsert.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonInsert.setText("Insertar");
         jButtonInsert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInsertActionPerformed(evt);
             }
         });
 
+        jButtonUpdate.setText("Modificar");
         jButtonUpdate.setBackground(new java.awt.Color(0, 153, 204));
+        jButtonUpdate.setEnabled(false);
         jButtonUpdate.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonUpdate.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonUpdate.setText("Modificar");
-        jButtonUpdate.setEnabled(false);
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
 
+        jButtonDelete.setText("Eliminar");
         jButtonDelete.setBackground(new java.awt.Color(153, 0, 51));
+        jButtonDelete.setEnabled(false);
         jButtonDelete.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonDelete.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonDelete.setText("Eliminar");
-        jButtonDelete.setEnabled(false);
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
 
+        jButtonClean.setText("Limpiar");
         jButtonClean.setBackground(new java.awt.Color(204, 204, 204));
         jButtonClean.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButtonClean.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonClean.setText("Limpiar");
         jButtonClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCleanActionPerformed(evt);
@@ -175,6 +176,14 @@ public class JFrameKey extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(jTableKey);
+
+        jLabelHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/examplejdbc/view/home.png"))); // NOI18N
+        jLabelHome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelHomeMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -214,7 +223,9 @@ public class JFrameKey extends javax.swing.JFrame {
                         .addGap(188, 188, 188)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(323, 323, 323)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabelHome)
+                        .addGap(248, 248, 248)
                         .addComponent(jLabelTitle))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(168, 168, 168)
@@ -233,7 +244,9 @@ public class JFrameKey extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabelTitle)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTitle)
+                    .addComponent(jLabelHome))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
@@ -248,7 +261,7 @@ public class JFrameKey extends javax.swing.JFrame {
                             .addComponent(jTextFieldCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelRoom)
                             .addComponent(jTextFieldRoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -361,6 +374,12 @@ public class JFrameKey extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
+    private void jLabelHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelHomeMouseClicked
+        JFrameHome view = new JFrameHome();
+        view.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jLabelHomeMouseClicked
+
     public void clean(){
         jTextFieldID.setText("");
         jTextFieldName.setText("");
@@ -415,6 +434,7 @@ public class JFrameKey extends javax.swing.JFrame {
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelCount;
+    private javax.swing.JLabel jLabelHome;
     private javax.swing.JLabel jLabelName;
     private javax.swing.JLabel jLabelObservation;
     private javax.swing.JLabel jLabelRoom;
